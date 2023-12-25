@@ -15,6 +15,11 @@ public class FileRead {
             int arrivalTime = Integer.parseInt(arr[0]);
             int priority = Integer.parseInt(arr[1]);
             int burnTime = Integer.parseInt(arr[2]);
+            int mbyte = Integer.parseInt(arr[3]);
+            int yazicilar = Integer.parseInt(arr[4]);
+            int tarayicilar = Integer.parseInt(arr[5]);
+            int modemler = Integer.parseInt(arr[6]);
+            int cd = Integer.parseInt(arr[7]);
 
 
             nodeArr.add(new MyProcess(counterProcess++,arrivalTime,priority,burnTime));

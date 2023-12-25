@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.nio.file.Paths;
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         FileRead fileRead = new FileRead();
         Queue realTime = new Queue();
         Queue priorty1 = new Queue();
