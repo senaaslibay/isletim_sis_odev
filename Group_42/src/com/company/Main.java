@@ -2,7 +2,7 @@ package com.company;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
-
+import java.nio.file.Paths;
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -14,7 +14,8 @@ public class Main {
 
         MyProcess askıdakiProcess = new MyProcess(-1,0,0,0);
 
-        ArrayList<MyProcess> nodeArr = fileRead.readFile("C:\\Users\\burak\\OneDrive\\Masaüstü\\odev\\Java-Host-Dispatch\\src\\Deneme.txt");
+        String qurrent_path = Paths.get(".").toAbsolutePath().normalize().toString() + ("\\src.\\Deneme.txt");
+        ArrayList<MyProcess> nodeArr = fileRead.readFile(qurrent_path);
         int totalProcess = nodeArr.size();
         nodeArr.sort((node1, node2) -> node1.arrivalTime - node2.arrivalTime);
 
