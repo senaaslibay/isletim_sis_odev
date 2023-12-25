@@ -17,13 +17,18 @@ public class Main {
         String qurrent_path = Paths.get(".").toAbsolutePath().normalize().toString() + ("\\src.\\Deneme.txt");
         ArrayList<MyProcess> nodeArr = fileRead.readFile(qurrent_path);
         int totalProcess = nodeArr.size();
+        //processlerin varış zamanlarına göre sıralanması
         nodeArr.sort((node1, node2) -> node1.arrivalTime - node2.arrivalTime);
 
         int counter = 0;
-        while (true) {
-            for (int i = 0; i < nodeArr.size() && nodeArr.get(i).arrivalTime <= counter; i++) {
-                if (nodeArr.get(i).arrivalTime == counter) {
-                    switch (nodeArr.get(i).priority) {
+        while (true) 
+        {
+            for (int i = 0; i < nodeArr.size() && nodeArr.get(i).arrivalTime <= counter; i++) 
+            {
+                if (nodeArr.get(i).arrivalTime == counter) 
+                {
+                    switch (nodeArr.get(i).priority) 
+                    {
                         case 0:
                             realTime.push(nodeArr.get(i));
                             break;
@@ -40,8 +45,10 @@ public class Main {
                             break;
                     }
                 }
-                Thread.sleep(200);
+               
             }
+            Thread.sleep(1000);
+            
             System.out.println("ZAMAN: "+counter);
             //zamanasimi kontrolü
             boolean zamanasimi=false;

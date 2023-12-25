@@ -17,7 +17,7 @@ public class MyProcess   {
         this.priority = priority;
         this.burnTime = burnTime;
         this.processId = processId;
-        this.timeout=arrivalTime+20;
+        this.timeout=arrivalTime+20;//20 saniyede bitmeyen process sonlandırılır.
     }
     public void run() throws IOException {
 
