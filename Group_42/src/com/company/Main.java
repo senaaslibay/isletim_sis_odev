@@ -82,6 +82,7 @@ public class Main {
             }
             if(zamanasimi==true)
                 continue;
+            
             if (realTime.head != null) {
                 Node temp = realTime.head;
                     if (askıdakiProcess.processId != temp.myProcess.processId && askıdakiProcess.processId != -1) {
@@ -158,8 +159,6 @@ public class Main {
                 return;
             }
             counter++;
-
-
         }
 
     }
