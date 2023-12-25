@@ -40,6 +40,7 @@ public class Main {
                             break;
                     }
                 }
+                Thread.sleep(200);
             }
             System.out.println("ZAMAN: "+counter);
             //zamanasimi kontrolü
