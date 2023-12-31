@@ -27,13 +27,20 @@ public class MyProcess   {
         this.yazicilar=yazicilar;
         this.modemler=modemler;
         this.cd=cd;
-    }
+    } // run metodu: Process'i çalıştırır
+
     public void run() throws IOException {
 
             ProcessBuilder pb = new ProcessBuilder("java","-version");
+             // Process'i başlat
             Process p = pb.start();
-            p.destroy();
+             // Process'i sonlandır
+        
+        p.destroy();
+                // Burn time azalt
+
             burnTime--;
+        // Burn time hala varsa ekrana bilgi yazdır
             if(burnTime >= 1){
                 System.out.println("Process" + processId + " 1 saniye çalıştı "+ "Önceligi" +priority );
             }
