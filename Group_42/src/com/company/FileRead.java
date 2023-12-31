@@ -22,7 +22,7 @@ public class FileRead {
             int cd = Integer.parseInt(arr[7]);
 
 
-            nodeArr.add(new MyProcess(counterProcess++,arrivalTime,priority,burnTime));
+            nodeArr.add(new MyProcess(counterProcess++,arrivalTime,priority,burnTime,mbyte,yazicilar,tarayicilar,modemler,cd));
         }
         return nodeArr;
     }

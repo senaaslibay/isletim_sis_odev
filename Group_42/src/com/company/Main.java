@@ -12,7 +12,8 @@ public class Main {
         Queue priorty2 = new Queue();
         Queue priorty3 = new Queue();
 
-        MyProcess askıdakiProcess = new MyProcess(-1,0,0,0);
+        //??????????????????????????????????????????????????????????????
+        MyProcess askıdakiProcess = new MyProcess(-1,0,0,0,0,0,0,0,0);
 
         String qurrent_path = Paths.get(".").toAbsolutePath().normalize().toString() + ("\\src.\\Deneme.txt");
         ArrayList<MyProcess> nodeArr = fileRead.readFile(qurrent_path);
@@ -96,7 +97,8 @@ public class Main {
                         System.out.println("Process" + temp.myProcess.processId + " sonlandı");
                         askıdakiProcess.processId = -1;
                     } else {
-                        askıdakiProcess = new MyProcess(temp.myProcess.processId, temp.myProcess.arrivalTime, temp.myProcess.priority, temp.myProcess.burnTime);
+                        askıdakiProcess = new MyProcess(temp.myProcess.processId, temp.myProcess.arrivalTime, temp.myProcess.priority, temp.myProcess.burnTime,
+                        		temp.myProcess.mbyte,temp.myProcess.yazicilar,temp.myProcess.tarayicilar,temp.myProcess.modemler,temp.myProcess.cd);
                     }
 
 
@@ -114,8 +116,8 @@ public class Main {
                         System.out.println("Process" + temp.myProcess.processId + " sonlandı");
                         askıdakiProcess.processId = -1;
                     } else {
-                        askıdakiProcess = new MyProcess(temp.myProcess.processId, temp.myProcess.arrivalTime, temp.myProcess.priority, temp.myProcess.burnTime);
-
+                    	askıdakiProcess = new MyProcess(temp.myProcess.processId, temp.myProcess.arrivalTime, temp.myProcess.priority, temp.myProcess.burnTime,
+                        		temp.myProcess.mbyte,temp.myProcess.yazicilar,temp.myProcess.tarayicilar,temp.myProcess.modemler,temp.myProcess.cd);
                     }
 
             } else if (priorty2.head != null) {
@@ -133,8 +135,8 @@ public class Main {
                         System.out.println("Process" + temp.myProcess.processId + " sonlandı");
                         askıdakiProcess.processId = -1;
                     } else {
-                        askıdakiProcess = new MyProcess(temp.myProcess.processId, temp.myProcess.arrivalTime, temp.myProcess.priority, temp.myProcess.burnTime);
-                    }
+                    	askıdakiProcess = new MyProcess(temp.myProcess.processId, temp.myProcess.arrivalTime, temp.myProcess.priority, temp.myProcess.burnTime,
+                        		temp.myProcess.mbyte,temp.myProcess.yazicilar,temp.myProcess.tarayicilar,temp.myProcess.modemler,temp.myProcess.cd);                    }
 
             } else if (priorty3.head != null) {
                 Node temp = priorty3.head;
@@ -150,8 +152,8 @@ public class Main {
                         System.out.println("Process" + temp.myProcess.processId + " sonlandı");
                         askıdakiProcess.processId = -1;
                     } else {
-                        askıdakiProcess = new MyProcess(temp.myProcess.processId, temp.myProcess.arrivalTime, temp.myProcess.priority, temp.myProcess.burnTime);
-                    }
+                    	askıdakiProcess = new MyProcess(temp.myProcess.processId, temp.myProcess.arrivalTime, temp.myProcess.priority, temp.myProcess.burnTime,
+                        		temp.myProcess.mbyte,temp.myProcess.yazicilar,temp.myProcess.tarayicilar,temp.myProcess.modemler,temp.myProcess.cd);                    }
                 }
 
 

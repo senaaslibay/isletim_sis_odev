@@ -10,14 +10,23 @@ public class MyProcess   {
     public int burnTime;
     public int processId;
     public int timeout;
+    public int mbyte;
+    public int yazicilar;
+    public int tarayicilar;
+    public int modemler;
+    public int cd;
 
 
-    public MyProcess(int processId,int arrivalTime, int priority, int burnTime){
+    public MyProcess(int processId,int arrivalTime, int priority, int burnTime,int mbyte,int yazicilar, int tarayicilar,int modemler,int cd){
         this.arrivalTime = arrivalTime;
         this.priority = priority;
         this.burnTime = burnTime;
         this.processId = processId;
         this.timeout=arrivalTime+20;//20 saniyede bitmeyen process sonlandırılır.
+        this.mbyte=mbyte;
+        this.yazicilar=yazicilar;
+        this.modemler=modemler;
+        this.cd=cd;
     }
     public void run() throws IOException {
 
