@@ -161,6 +161,15 @@ public class Main {
                 return;
             }
             counter++;
+            
+        // Create an instance of the Dispatcher
+        Dispatcher dispatcher = new Dispatcher();
+
+        // Read processes from the input file
+        dispatcher.readProcessesFromFile("input.txt");
+
+        // Run the dispatcher
+        dispatcher.runDispatcher();
         }
 
     }
