@@ -12,15 +12,18 @@ public class Main {
         Queue priorty2 = new Queue();
         Queue priorty3 = new Queue();
 
-        //??????????????????????????????????????????????????????????????
+        //Askıdaki process oluşturulurken varış zamanı -1 olarak tanımlanıyor bu sayede askıdaki process olduğu anlaşılıyor
         MyProcess askıdakiProcess = new MyProcess(-1,0,0,0,0,0,0,0,0);
 
+
+        // Deneme.txt dosyasından veriler okunuyor
         String qurrent_path = Paths.get(".").toAbsolutePath().normalize().toString() + ("\\src.\\Deneme.txt");
         ArrayList<MyProcess> nodeArr = fileRead.readFile(qurrent_path);
         int totalProcess = nodeArr.size();
         //processlerin varış zamanlarına göre sıralanması
         nodeArr.sort((node1, node2) -> node1.arrivalTime - node2.arrivalTime);
 
+        //varış zamanlarına göre processler realTime priority1, priority2, priority3 olmak üzere queuelara atılıyor.
         int counter = 0;
         while (true) 
         {
@@ -48,6 +51,7 @@ public class Main {
                 }
                
             }
+            //1 saniyelik gecikme yapılıyor
             Thread.sleep(1000);
             
             System.out.println("ZAMAN: "+counter);
